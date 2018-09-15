@@ -1,0 +1,9 @@
+<Defs>
+  <ThingCategoryDef>
+    <defName>fleeceCategory</defName>
+    <label>fleece</label>
+    <parent>ResourcesRaw</parent>
+    <iconPath>UI/Icons/ThingCategories/Textiles</iconPath>
+	<resourceReadoutRoot>true</resourceReadoutRoot>
+  </ThingCategoryDef>
+</Defs>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+            <!-- Wool Recipe Parent -->
+  <RecipeDef Abstract="True" Name="RecipeWoolBase">
+    <workSpeedStat>TailoringSpeed</workSpeedStat>
+    <effectWorking>Tailor</effectWorking>
+    <soundWorking>Recipe_Tailor</soundWorking>
+    <workAmount>500</workAmount>
+    <allowMixingIngredients>false</allowMixingIngredients>
+	<targetCountAdjustment>50</targetCountAdjustment>
+    <recipeUsers>
+      <li>ElectricTailoringBench</li>
+      <li>HandTailoringBench</li>
+    </recipeUsers>
+	<workSkill>Crafting</workSkill>
+  </RecipeDef>
+  
+  
+  
+  <RecipeDef ParentName="RecipeWoolBase">
+    <defName>Make_WoolMegasloth</defName>
+	<label>megasloth wool</label>
+	<description>Create Megasloth wool from Megasloth fleece.</description>
+	<jobString>Making megasloth wool</jobString>
+	<ingredients>
+	  <li>
+	    <filter>
+		  <thingDefs>
+		    <li>megaslothFleece</li>
+		  </thingDefs>
+		</filter>
+	    <count>50</count>
+	  </li>
+	</ingredients>
+	<products>
+	  <WoolMegasloth>50</WoolMegasloth>
+	</products>
+	<fixedIngredientFilter>
+	  <thingDefs>
+	    <li>megaslothFleece</li>
+	  </thingDefs>
+	</fixedIngredientFilter>
+  </RecipeDef>
+  
+
+  <RecipeDef ParentName="RecipeWoolBase">
+    <defName>Make_WoolAlpaca</defName>
+	<label>alpaca wool</label>
+	<description>Create alpaca wool from alpaca fleece.</description>
+	<jobString>Making alpaca wool</jobString>
+	<ingredients>
+	  <li>
+	    <filter>
+		  <thingDefs>
+		    <li>alpacaFleece</li>
+		  </thingDefs>
+		</filter>
+	    <count>50</count>
+	  </li>
+	</ingredients>
+	<products>
+	  <WoolAlpaca>50</WoolAlpaca>
+	</products>
+	<fixedIngredientFilter>
+	  <thingDefs>
+	    <li>alpacaFleece</li>
+	  </thingDefs>
+	</fixedIngredientFilter>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="RecipeWoolBase">
+    <defName>Make_MuffaloWool</defName>
+	<label>muffalo wool</label>
+	<description>Create muffalo wool from muffalo fleece.</description>
+	<jobString>Making muffalo wool</jobString>
+	<ingredients>
+	  <li>
+	    <filter>
+		  <thingDefs>
+		    <li>muffaloFleece</li>
+		  </thingDefs>
+		</filter>
+	    <count>50</count>
+	  </li>
+	</ingredients>
+	<products>
+	  <WoolMuffalo>50</WoolMuffalo>
+	</products>
+	<fixedIngredientFilter>
+	  <thingDefs>
+	    <li>muffaloFleece</li>
+	  </thingDefs>
+	</fixedIngredientFilter>
+  </RecipeDef>
+  
+  
+  <RecipeDef ParentName="RecipeWoolBase">
+    <defName>Make_WoolCamel</defName>
+	<label>camelhair</label>
+	<description>Create camelhair from dromedary fleece.</description>
+	<jobString>Making camelhair</jobString>
+	<ingredients>
+	  <li>
+	    <filter>
+		  <thingDefs>
+		    <li>camelFleece</li>
+		  </thingDefs>
+		</filter>
+	    <count>50</count>
+	  </li>
+	</ingredients>
+	<products>
+	  <WoolCamel>50</WoolCamel>
+	</products>
+	<fixedIngredientFilter>
+	  <thingDefs>
+	    <li>camelFleece</li>
+	  </thingDefs>
+	</fixedIngredientFilter>
+  </RecipeDef>
+  
+</Defs>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Slightly More Realistic Wool Production</name>
+  <author>CrunchyDuck, Oken</author>
+  <targetVersion>0.19.0</targetVersion>
+  <description>Requires wool to be processed at a tailor's bench before it can be used in production.</description>
+</ModMetaData>

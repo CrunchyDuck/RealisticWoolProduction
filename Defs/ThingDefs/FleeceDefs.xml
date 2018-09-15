@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+<!-- Fleece parent -->
+  <ThingDef Abstract="True" ParentName="OrganicProductBase" Name="FleeceBase">
+	<soundInteract>Standard_Drop</soundInteract>
+	<soundDrop>Standard_Drop</soundDrop>
+	<stackLimit>100</stackLimit>
+	<thingCategories>
+	  <li>fleeceCategory</li>
+	</thingCategories>
+	<graphicData>
+	  <texPath>Things/Item/Resource/fleece</texPath>
+	</graphicData>
+	<statBases>
+	  <MarketValue>2</MarketValue>
+	  <Flammability>2</Flammability>
+	  <DeteriorationRate>8</DeteriorationRate>
+	</statBases>
+  </ThingDef>
+
+
+<!-- Fleece for animals -->
+
+  <ThingDef ParentName="FleeceBase">
+    <defName>megaslothFleece</defName>
+    <label>megasloth fleece</label>
+    <description>The untreated fleece of a Megasloth. It must be made in to wool at a Tailor's bench before it can be used.</description>
+    <graphicData>
+      <color>(189,161,116)</color>
+    </graphicData>
+    <stuffProps>
+      <color>(189,161,116)</color>
+    </stuffProps>
+  </ThingDef>
+  
+  <ThingDef ParentName="FleeceBase">
+    <defName>muffaloFleece</defName>
+    <label>muffalo fleece</label>
+    <description>The untreated fleece of a Muffalo. It must be made in to wool at a Tailor's bench before it can be used.</description>
+    <graphicData>
+      <color>(179,192,186)</color>
+    </graphicData>
+    <stuffProps>
+      <color>(179,192,186)</color>
+    </stuffProps>
+  </ThingDef>
+  
+  <ThingDef ParentName="FleeceBase">
+    <defName>camelFleece</defName>
+	<label>camel fleece</label>
+    <description>The untreated fleece of a Camel. It must be made in to wool at a Tailor's bench before it can be used.</description>
+    <graphicData>
+      <color>(220,179,132)</color>
+    </graphicData>
+    <stuffProps>
+      <color>(220,179,132)</color>
+    </stuffProps>
+  </ThingDef>
+  
+  <ThingDef ParentName="FleeceBase">
+    <defName>alpacaFleece</defName>
+	<label>alpaca fleece</label>
+	<description>The untreated fleece of an Alpaca. It must be made in to wool at a Tailor's bench before it can be used.</description>
+        <graphicData>
+      <color>(237,216,174)</color>
+    </graphicData>
+    <stuffProps>
+      <color>(180,148,109)</color>
+    </stuffProps>
+  </ThingDef>
+  
+  
+  
+  <!-- Parents -->
+
+    <ThingDef Abstract="True" Name="OrganicProductBase" ParentName="ResourceBase">
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>60</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>6</DeteriorationRate>
+			<Mass>0.03</Mass>
+    </statBases>
+    <tickerType>Rare</tickerType>
+  </ThingDef>
+  
+    <ThingDef Name="ResourceBase" Abstract="True">
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <useHitPoints>true</useHitPoints>
+    <selectable>true</selectable>
+    <altitudeLayer>Item</altitudeLayer>
+    <stackLimit>75</stackLimit>
+    <statBases>
+      <Beauty>-4</Beauty>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+    </comps>
+    <alwaysHaulable>true</alwaysHaulable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <rotatable>false</rotatable>
+    <pathCost>15</pathCost>
+  </ThingDef>
+
+</Defs>
+
