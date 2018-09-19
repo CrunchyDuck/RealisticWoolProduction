@@ -5,7 +5,7 @@
     <workSpeedStat>TailoringSpeed</workSpeedStat>
     <effectWorking>Tailor</effectWorking>
     <soundWorking>Recipe_Tailor</soundWorking>
-    <workAmount>500</workAmount>
+    <workAmount>350</workAmount>
     <allowMixingIngredients>false</allowMixingIngredients>
 	<targetCountAdjustment>50</targetCountAdjustment>
     <recipeUsers>
@@ -19,7 +19,7 @@
   
   <RecipeDef ParentName="RecipeWoolBase">
     <defName>Make_WoolMegasloth</defName>
-	<label>megasloth wool</label>
+	<label>weave Megasloth wool</label>
 	<description>Create Megasloth wool from Megasloth fleece.</description>
 	<jobString>Making megasloth wool</jobString>
 	<ingredients>
@@ -45,7 +45,7 @@
 
   <RecipeDef ParentName="RecipeWoolBase">
     <defName>Make_WoolAlpaca</defName>
-	<label>alpaca wool</label>
+	<label>weave Alpaca wool</label>
 	<description>Create alpaca wool from alpaca fleece.</description>
 	<jobString>Making alpaca wool</jobString>
 	<ingredients>
@@ -70,7 +70,7 @@
   
   <RecipeDef ParentName="RecipeWoolBase">
     <defName>Make_MuffaloWool</defName>
-	<label>muffalo wool</label>
+	<label>weave Muffalo wool</label>
 	<description>Create muffalo wool from muffalo fleece.</description>
 	<jobString>Making muffalo wool</jobString>
 	<ingredients>
@@ -96,7 +96,7 @@
   
   <RecipeDef ParentName="RecipeWoolBase">
     <defName>Make_WoolCamel</defName>
-	<label>camelhair</label>
+	<label>weave Camelhair</label>
 	<description>Create camelhair from dromedary fleece.</description>
 	<jobString>Making camelhair</jobString>
 	<ingredients>
