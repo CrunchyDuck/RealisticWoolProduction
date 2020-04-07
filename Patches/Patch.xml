@@ -41,7 +41,7 @@
 		<WarningFail>Animal Collab Proj not detected, ignoring it's compatibility sequence</WarningFail>
 	  </li>
 	  <li Class="PatchOperationAdd">
-	    <xpath>Defs</xpath>
+	    <xpath>/Defs</xpath>
 		<value>
 		
 		  <ThingDef ParentName="FleeceBase">
