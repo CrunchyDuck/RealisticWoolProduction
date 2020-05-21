@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
             <!-- Wool Recipe Parent -->
-  <RecipeDef Abstract="True" Name="RecipeWoolBase">
-    <workSpeedStat>TailoringSpeed</workSpeedStat>
+  <RecipeDef Abstract="True" Name="SMRW_RecipeWoolBase">
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <effectWorking>Tailor</effectWorking>
     <soundWorking>Recipe_Tailor</soundWorking>
     <workAmount>350</workAmount>
@@ -17,8 +17,8 @@
   
   
   
-  <RecipeDef ParentName="RecipeWoolBase">
-    <defName>Make_WoolMegasloth</defName>
+  <RecipeDef ParentName="SMRW_RecipeWoolBase">
+    <defName>SMRW_Make_WoolMegasloth</defName>
 	<label>weave Megasloth wool</label>
 	<description>Create Megasloth wool from Megasloth fleece.</description>
 	<jobString>Making megasloth wool</jobString>
@@ -26,7 +26,7 @@
 	  <li>
 	    <filter>
 		  <thingDefs>
-		    <li>megaslothFleece</li>
+		    <li>SMRW_megaslothFleece</li>
 		  </thingDefs>
 		</filter>
 	    <count>50</count>
@@ -37,14 +37,14 @@
 	</products>
 	<fixedIngredientFilter>
 	  <thingDefs>
-	    <li>megaslothFleece</li>
+	    <li>SMRW_megaslothFleece</li>
 	  </thingDefs>
 	</fixedIngredientFilter>
   </RecipeDef>
   
 
-  <RecipeDef ParentName="RecipeWoolBase">
-    <defName>Make_WoolAlpaca</defName>
+  <RecipeDef ParentName="SMRW_RecipeWoolBase">
+    <defName>SMRW_Make_WoolAlpaca</defName>
 	<label>weave Alpaca wool</label>
 	<description>Create alpaca wool from alpaca fleece.</description>
 	<jobString>Making alpaca wool</jobString>
@@ -52,7 +52,7 @@
 	  <li>
 	    <filter>
 		  <thingDefs>
-		    <li>alpacaFleece</li>
+		    <li>SMRW_alpacaFleece</li>
 		  </thingDefs>
 		</filter>
 	    <count>50</count>
@@ -63,13 +63,13 @@
 	</products>
 	<fixedIngredientFilter>
 	  <thingDefs>
-	    <li>alpacaFleece</li>
+	    <li>SMRW_alpacaFleece</li>
 	  </thingDefs>
 	</fixedIngredientFilter>
   </RecipeDef>
   
-  <RecipeDef ParentName="RecipeWoolBase">
-    <defName>Make_MuffaloWool</defName>
+  <RecipeDef ParentName="SMRW_RecipeWoolBase">
+    <defName>SMRW_Make_MuffaloWool</defName>
 	<label>weave Muffalo wool</label>
 	<description>Create muffalo wool from muffalo fleece.</description>
 	<jobString>Making muffalo wool</jobString>
@@ -77,7 +77,7 @@
 	  <li>
 	    <filter>
 		  <thingDefs>
-		    <li>muffaloFleece</li>
+		    <li>SMRW_muffaloFleece</li>
 		  </thingDefs>
 		</filter>
 	    <count>50</count>
@@ -88,33 +88,57 @@
 	</products>
 	<fixedIngredientFilter>
 	  <thingDefs>
-	    <li>muffaloFleece</li>
+	    <li>SMRW_muffaloFleece</li>
 	  </thingDefs>
 	</fixedIngredientFilter>
   </RecipeDef>
   
-  
-  <RecipeDef ParentName="RecipeWoolBase">
-    <defName>Make_WoolCamel</defName>
-	<label>weave Camelhair</label>
-	<description>Create camelhair from dromedary fleece.</description>
-	<jobString>Making camelhair</jobString>
+  <RecipeDef ParentName="SMRW_RecipeWoolBase">
+    <defName>SMRW_Make_BisonWool</defName>
+	<label>weave Bison wool</label>
+	<description>Create bison wool from bison fleece.</description>
+	<jobString>Making bison wool</jobString>
 	<ingredients>
 	  <li>
 	    <filter>
 		  <thingDefs>
-		    <li>camelFleece</li>
+		    <li>SMRW_bisonFleece</li>
 		  </thingDefs>
 		</filter>
 	    <count>50</count>
 	  </li>
 	</ingredients>
 	<products>
-	  <WoolCamel>50</WoolCamel>
+	  <WoolBison>50</WoolBison>
 	</products>
 	<fixedIngredientFilter>
 	  <thingDefs>
-	    <li>camelFleece</li>
+	    <li>SMRW_bisonFleece</li>
+	  </thingDefs>
+	</fixedIngredientFilter>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="SMRW_RecipeWoolBase">
+    <defName>SMRW_Make_SheepWool</defName>
+	<label>weave Sheep wool</label>
+	<description>Create sheep wool from sheep fleece.</description>
+	<jobString>Making sheep wool</jobString>
+	<ingredients>
+	  <li>
+	    <filter>
+		  <thingDefs>
+		    <li>SMRW_sheepFleece</li>
+		  </thingDefs>
+		</filter>
+	    <count>50</count>
+	  </li>
+	</ingredients>
+	<products>
+	  <WoolSheep>50</WoolSheep>
+	</products>
+	<fixedIngredientFilter>
+	  <thingDefs>
+	    <li>SMRW_sheepFleece</li>
 	  </thingDefs>
 	</fixedIngredientFilter>
   </RecipeDef>

@@ -1,63 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-
+  <!--Core-->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="Megasloth"]/comps/li/woolDef</xpath>
 	<value>
-	  <woolDef>megaslothFleece</woolDef>
+	  <woolDef>SMRW_megaslothFleece</woolDef>
 	</value>
   </Operation>
   
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="Muffalo"]/comps/li/woolDef</xpath>
 	<value>
-	  <woolDef>muffaloFleece</woolDef>
+	  <woolDef>SMRW_muffaloFleece</woolDef>
 	</value>
   </Operation>
   
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="Alpaca"]/comps/li/woolDef</xpath>
 	<value>
-	  <woolDef>alpacaFleece</woolDef>
+	  <woolDef>SMRW_alpacaFleece</woolDef>
 	</value>
   </Operation>
   
   <Operation Class="PatchOperationReplace">
-    <xpath>Defs/ThingDef[defName="Dromedary"]/comps/li/woolDef</xpath>
+    <xpath>Defs/ThingDef[defName="Sheep"]/comps/li/woolDef</xpath>
 	<value>
-	  <woolDef>camelFleece</woolDef>
+	  <woolDef>SMRW_sheepFleece</woolDef>
 	</value>
   </Operation>
   
-  <!-- Modcheck for AnimalCollabProj -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Bison"]/comps/li/woolDef</xpath>
+	<value>
+	  <woolDef>SMRW_bisonFleece</woolDef>
+	</value>
+  </Operation>
   
-  <Operation Class="Modcheck.Sequence">
-    <success>Always</success>
-    <patchName>Patching for Animal Collab Proj</patchName>
+  <Operation Class="PatchOperationFindMod">
+	<mods>
+	  <li>AnimalCollabProj</li>
+	</mods>
+	<match Class="PatchOperationSequence">
+	<success>Always</success>
 	<operations>
-	  <li Class="Modcheck.IsModLoaded">
-	    <modName>AnimalCollabProj</modName>
-		<errorOnFail>false</errorOnFail>
-		<WarningFail>Animal Collab Proj not detected, ignoring it's compatibility sequence</WarningFail>
-	  </li>
 	  <li Class="PatchOperationAdd">
 	    <xpath>Defs</xpath>
 		<value>
-		
-		  <ThingDef ParentName="FleeceBase">
-			<defName>sheepFleece</defName>
-			<label>sheep fleece</label>
-			<description>The untreated fleece of a Sheep. It must be made in to wool at a Tailor's bench before it can be used.</description>
-			<graphicData>
-			  <color>(245,245,245)</color>
-			</graphicData>
-			<stuffProps>
-			  <color>(245,245,245)</color>
-			</stuffProps>
-		  </ThingDef>
 		  
-		  <ThingDef ParentName="FleeceBase">
-			<defName>direWolfFleece</defName>
+		  <ThingDef ParentName="SMRW_FleeceBase">
+			<defName>SMRW_direWolfFleece</defName>
 			<label>direwolf fleece</label>
 			<description>The untreated fleece of a Direwolf. It must be made in to wool at a Tailor's bench before it can be used.</description>
 			<graphicData>
@@ -68,8 +59,8 @@
 			</stuffProps>
 		  </ThingDef>
 		  
-		  <ThingDef ParentName="FleeceBase">
-			<defName>downyBisonFleece</defName>
+		  <ThingDef ParentName="SMRW_FleeceBase">
+			<defName>SMRW_downyBisonFleece</defName>
 			<label>downy bison fleece</label>
 			<description>The untreated fleece of a Downy Bison. It must be made in to wool at a Tailor's bench before it can be used.</description>
 			<graphicData>
@@ -80,8 +71,8 @@
 			</stuffProps>
 		  </ThingDef>
 		  
-		  <ThingDef ParentName="FleeceBase">
-			<defName>llamaFleece</defName>
+		  <ThingDef ParentName="SMRW_FleeceBase">
+			<defName>SMRW_llamaFleece</defName>
 			<label>llama fleece</label>
 			<description>The untreated fleece of a Llama. It must be made in to wool at a Tailor's bench before it can be used.</description>
 			<graphicData>
@@ -92,8 +83,8 @@
 			</stuffProps>
 		  </ThingDef>
 		  
-		  <ThingDef ParentName="FleeceBase">
-			<defName>angoraRabbitFleece</defName>
+		  <ThingDef ParentName="SMRW_FleeceBase">
+			<defName>SMRW_angoraRabbitFleece</defName>
 			<label>angora rabbit fleece</label>
 			<description>The untreated fleece of an Angora Rabbit. It must be made in to wool at a Tailor's bench before it can be used.</description>
 			<graphicData>
@@ -104,33 +95,8 @@
 			</stuffProps>
 		  </ThingDef>
 		  
-		  <RecipeDef ParentName="RecipeWoolBase">
-			<defName>Make_ACPSheepWool</defName>
-			<label>weave Sheep wool</label>
-			<description>Create Sheep wool from Sheep fleece.</description>
-			<jobString>Making sheep wool</jobString>
-			<ingredients>
-			  <li>
-				<filter>
-				  <thingDefs>
-					<li>sheepFleece</li>
-				  </thingDefs>
-				</filter>
-				<count>30</count>
-			  </li>
-			</ingredients>
-			<products>
-			  <ACPSheepWool>30</ACPSheepWool>
-			</products>
-			<fixedIngredientFilter>
-			  <thingDefs>
-				<li>sheepFleece</li>
-			  </thingDefs>
-			</fixedIngredientFilter>
-		  </RecipeDef>
-		  
-		  <RecipeDef ParentName="RecipeWoolBase">
-			<defName>Make_ACPBDireWolfWool</defName>
+		  <RecipeDef ParentName="SMRW_RecipeWoolBase">
+			<defName>SMRW_Make_ACPBDireWolfWool</defName>
 			<label>weave Direwolf wool</label>
 			<description>Create Direwolf wool from Direwolf fleece.</description>
 			<jobString>Making Direwolf wool</jobString>
@@ -138,7 +104,7 @@
 			  <li>
 				<filter>
 				  <thingDefs>
-					<li>direWolfFleece</li>
+					<li>SMRW_direWolfFleece</li>
 				  </thingDefs>
 				</filter>
 				<count>25</count>
@@ -149,13 +115,13 @@
 			</products>
 			<fixedIngredientFilter>
 			  <thingDefs>
-				<li>direWolfFleece</li>
+				<li>SMRW_direWolfFleece</li>
 			  </thingDefs>
 			</fixedIngredientFilter>
 		  </RecipeDef>
 		  
-		  <RecipeDef ParentName="RecipeWoolBase">
-			<defName>Make_ACPBison</defName>
+		  <RecipeDef ParentName="SMRW_RecipeWoolBase">
+			<defName>SMRW_Make_ACPBison</defName>
 			<label>weave Downy Bison wool</label>
 			<description>Create Downy Bison wool from Downy Bison fleece.</description>
 			<jobString>Making Downy Bison wool</jobString>
@@ -163,7 +129,7 @@
 			  <li>
 				<filter>
 				  <thingDefs>
-					<li>downyBisonFleece</li>
+					<li>SMRW_downyBisonFleece</li>
 				  </thingDefs>
 				</filter>
 				<count>30</count>
@@ -174,13 +140,13 @@
 			</products>
 			<fixedIngredientFilter>
 			  <thingDefs>
-				<li>downyBisonFleece</li>
+				<li>SMRW_downyBisonFleece</li>
 			  </thingDefs>
 			</fixedIngredientFilter>
 		  </RecipeDef>
 		  
-		  <RecipeDef ParentName="RecipeWoolBase">
-			<defName>Make_ACPLlamaWool</defName>
+		  <RecipeDef ParentName="SMRW_RecipeWoolBase">
+			<defName>SMRW_Make_ACPLlamaWool</defName>
 			<label>weave Llama wool</label>
 			<description>Create Llama wool from Llama fleece.</description>
 			<jobString>Making Llama wool</jobString>
@@ -188,7 +154,7 @@
 			  <li>
 				<filter>
 				  <thingDefs>
-					<li>llamaFleece</li>
+					<li>SMRW_llamaFleece</li>
 				  </thingDefs>
 				</filter>
 				<count>60</count>
@@ -199,13 +165,13 @@
 			</products>
 			<fixedIngredientFilter>
 			  <thingDefs>
-				<li>llamaFleece</li>
+				<li>SMRW_llamaFleece</li>
 			  </thingDefs>
 			</fixedIngredientFilter>
 		  </RecipeDef>
 		  
-		  <RecipeDef ParentName="RecipeWoolBase">
-			<defName>Make_ACPAngoraWool</defName>
+		  <RecipeDef ParentName="SMRW_RecipeWoolBase">
+			<defName>SMRW_Make_ACPAngoraWool</defName>
 			<label>weave Angora Rabbit wool</label>
 			<description>Create Angora Rabbit wool from Angora Rabbit fleece.</description>
 			<jobString>Making Angora Rabbit wool</jobString>
@@ -213,7 +179,7 @@
 			  <li>
 				<filter>
 				  <thingDefs>
-					<li>angoraRabbitFleece</li>
+					<li>SMRW_angoraRabbitFleece</li>
 				  </thingDefs>
 				</filter>
 				<count>10</count>
@@ -224,7 +190,7 @@
 			</products>
 			<fixedIngredientFilter>
 			  <thingDefs>
-				<li>angoraRabbitFleece</li>
+				<li>SMRW_angoraRabbitFleece</li>
 			  </thingDefs>
 			</fixedIngredientFilter>
 		  </RecipeDef>
@@ -235,54 +201,52 @@
 	  <li Class="PatchOperationReplace">
 	    <xpath>Defs/ThingDef[defName="ACPSheep"]/comps/li/woolDef</xpath>
 	    <value>
-	      <woolDef>sheepFleece</woolDef>
+	      <woolDef>SMRW_sheepFleece</woolDef>
 	    </value>
 	  </li>
 	  
 	  <li Class="PatchOperationReplace">
 	    <xpath>Defs/ThingDef[defName="ACPBlackwolf"]/comps/li/woolDef</xpath>
 	    <value>
-	      <woolDef>direWolfFleece</woolDef>
+	      <woolDef>SMRW_direWolfFleece</woolDef>
 	    </value>
 	  </li>
 	  
 	  <li Class="PatchOperationReplace">
 	    <xpath>Defs/ThingDef[defName="ACPBison"]/comps/li/woolDef</xpath>
 	    <value>
-	      <woolDef>downyBisonFleece</woolDef>
+	      <woolDef>SMRW_downyBisonFleece</woolDef>
 	    </value>
 	  </li>
 	  
 	  <li Class="PatchOperationReplace">
 	    <xpath>Defs/ThingDef[defName="ACPLlama"]/comps/li/woolDef</xpath>
 	    <value>
-	      <woolDef>llamaFleece</woolDef>
+	      <woolDef>SMRW_llamaFleece</woolDef>
 	    </value>
 	  </li>
 	  
 	  <li Class="PatchOperationReplace">
 	    <xpath>Defs/ThingDef[defName="ACPAngoraRabbit"]/comps/li/woolDef</xpath>
 	    <value>
-	      <woolDef>angoraRabbitFleece</woolDef>
+	      <woolDef>SMRW_angoraRabbitFleece</woolDef>
 	    </value>
 	  </li>
 	  
     </operations>
+	</match>
   </Operation>
 	
   <!-- Modcheck for Vegetable Garden -->
-	
-  <Operation Class="Modcheck.Sequence">
-    <success>Always</success>
-    <patchName>Patching for VGP Garden Fabrics</patchName>
+  <Operation Class="PatchOperationFindMod">
+	<mods>
+	  <li>VGP Garden Fabrics</li>
+	</mods>
+	<match Class="PatchOperationSequence">
+	<success>Always</success>
 	<operations>
-	  <li Class="Modcheck.IsModLoaded">
-	    <modName>VGP Garden Fabrics</modName>
-		<errorOnFail>false</errorOnFail>
-		<WarningFail>VGP Garden Fabrics not detected, ignoring it's compatibility sequence</WarningFail>
-	  </li>
 	  <li Class="PatchOperationReplace">
-        <xpath>Defs/RecipeDef[@Name="RecipeWoolBase"]/recipeUsers</xpath>
+        <xpath>Defs/RecipeDef[@Name="SMRW_RecipeWoolBase"]/recipeUsers</xpath>
 	    <value>
 	      <recipeUsers>
 	        <li>TableLoom</li>
@@ -291,75 +255,67 @@
 	    </value>
 	  </li>
 	  <li Class="PatchOperationReplace">
-	    <xpath>Defs/ThingDef[defName="megaslothFleece"]/description</xpath>
+	    <xpath>Defs/ThingDef[defName="SMRW_megaslothFleece"]/description</xpath>
 		<value>
 		  <description>The untreated fleece of a Megasloth. It must be made in to wool at a Tailor's loom before it can be used.</description>
 		</value>
 	  </li>
 	  <li Class="PatchOperationReplace">
-	    <xpath>Defs/ThingDef[defName="muffaloFleece"]/description</xpath>
+	    <xpath>Defs/ThingDef[defName="SMRW_muffaloFleece"]/description</xpath>
 		<value>
 		  <description>The untreated fleece of a Muffalo. It must be made in to wool at a Tailor's loom before it can be used.</description>
 		</value>
 	  </li>
 	  <li Class="PatchOperationReplace">
-	    <xpath>Defs/ThingDef[defName="camelFleece"]/description</xpath>
+	    <xpath>Defs/ThingDef[defName="SMRW_camelFleece"]/description</xpath>
 		<value>
 		  <description>The untreated fleece of a Camel. It must be made in to wool at a Tailor's loom before it can be used.</description>
 		</value>
 	  </li>
 	  <li Class="PatchOperationReplace">
-	    <xpath>Defs/ThingDef[defName="alpacaFleece"]/description</xpath>
+	    <xpath>Defs/ThingDef[defName="SMRW_alpacaFleece"]/description</xpath>
 		<value>
 		  <description>The untreated fleece of an Alpaca. It must be made in to wool at a Tailor's loom before it can be used.</description>
 		</value>
 	  </li>
 	  
 	  <!-- Modcheck for cross compatibility with VGP and ACP -->
-	  
-	  <li Class="Modcheck.AND">
-	    <tests>
-		  <li Class="Modcheck.IsModLoaded">
-		    <modName>VGP Garden Fabrics</modName>
-			<errorOnFail>false</errorOnFail>
+	  <li Class="PatchOperationFindMod">
+		<mods>
+		  <li>AnimalCollabProj</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+		  <li Class="PatchOperationReplace">
+			<xpath>*/ThingDef[defName="SMRW_direWolfFleece"]/description</xpath>
+			<value>
+			  <description>The untreated fleece of a Direwolf. It must be made in to wool at a Tailor's loom before it can be used.</description>
+			</value>
 		  </li>
-		  <li Class="Modcheck.IsModLoaded">
-		    <modName>AnimalCollabProj</modName>
-			<errorOnFail>false</errorOnFail>
+		  <li Class="PatchOperationReplace">
+			<xpath>*/ThingDef[defName="SMRW_downyBisonFleece"]/description</xpath>
+			<value>
+			  <description>The untreated fleece of a Downy Bison. It must be made in to wool at a Tailor's loom before it can be used.</description>
+			</value>
 		  </li>
-		</tests>
-	  </li>
-	  <li Class="PatchOperationReplace">
-	    <xpath>*/ThingDef[defName="sheepFleece"]/description</xpath>
-		<value>
-		  <description>The untreated fleece of a Sheep. It must be made in to wool at a Tailor's loom before it can be used.</description>
-		</value>
-	  </li>
-	  <li Class="PatchOperationReplace">
-	    <xpath>*/ThingDef[defName="direWolfFleece"]/description</xpath>
-		<value>
-		  <description>The untreated fleece of a Direwolf. It must be made in to wool at a Tailor's loom before it can be used.</description>
-		</value>
-	  </li>
-	  <li Class="PatchOperationReplace">
-	    <xpath>*/ThingDef[defName="downyBisonFleece"]/description</xpath>
-		<value>
-		  <description>The untreated fleece of a Downy Bison. It must be made in to wool at a Tailor's loom before it can be used.</description>
-		</value>
-	  </li>
-	  <li Class="PatchOperationReplace">
-	    <xpath>*/ThingDef[defName="llamaFleece"]/description</xpath>
-		<value>
-		  <description>The untreated fleece of a Llama. It must be made in to wool at a Tailor's loom before it can be used.</description>
-		</value>
-	  </li>
-	  <li Class="PatchOperationReplace">
-	    <xpath>*/ThingDef[defName="angoraRabbitFleece"]/description</xpath>
-		<value>
-		  <description>The untreated fleece of an Angora Rabbit. It must be made in to wool at a Tailor's loom before it can be used.</description>
-		</value>
-	  </li>
+		  <li Class="PatchOperationReplace">
+			<xpath>*/ThingDef[defName="SMRW_llamaFleece"]/description</xpath>
+			<value>
+			  <description>The untreated fleece of a Llama. It must be made in to wool at a Tailor's loom before it can be used.</description>
+			</value>
+		  </li>
+		  <li Class="PatchOperationReplace">
+			<xpath>*/ThingDef[defName="SMRW_angoraRabbitFleece"]/description</xpath>
+			<value>
+			  <description>The untreated fleece of an Angora Rabbit. It must be made in to wool at a Tailor's loom before it can be used.</description>
+			</value>
+		  </li>
+		</operations>
+		</match>
+	</li>
 	</operations>
+	</match>
   </Operation>
   
 </Patch>

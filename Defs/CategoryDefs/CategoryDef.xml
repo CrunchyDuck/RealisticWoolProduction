@@ -1,6 +1,6 @@
 <Defs>
   <ThingCategoryDef>
-    <defName>fleeceCategory</defName>
+    <defName>SMRW_fleeceCategory</defName>
     <label>fleece</label>
     <parent>ResourcesRaw</parent>
     <iconPath>UI/Icons/ThingCategories/Textiles</iconPath>
