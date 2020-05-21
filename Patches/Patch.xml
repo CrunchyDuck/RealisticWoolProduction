@@ -2,35 +2,35 @@
 <Patch>
   <!--Core-->
   <Operation Class="PatchOperationReplace">
-    <xpath>Defs/ThingDef[defName="Megasloth"]/comps/li/woolDef</xpath>
+    <xpath>/Defs/ThingDef[defName="Megasloth"]/comps/li/woolDef</xpath>
 	<value>
 	  <woolDef>SMRW_megaslothFleece</woolDef>
 	</value>
   </Operation>
   
   <Operation Class="PatchOperationReplace">
-    <xpath>Defs/ThingDef[defName="Muffalo"]/comps/li/woolDef</xpath>
+    <xpath>/Defs/ThingDef[defName="Muffalo"]/comps/li/woolDef</xpath>
 	<value>
 	  <woolDef>SMRW_muffaloFleece</woolDef>
 	</value>
   </Operation>
   
   <Operation Class="PatchOperationReplace">
-    <xpath>Defs/ThingDef[defName="Alpaca"]/comps/li/woolDef</xpath>
+    <xpath>/Defs/ThingDef[defName="Alpaca"]/comps/li/woolDef</xpath>
 	<value>
 	  <woolDef>SMRW_alpacaFleece</woolDef>
 	</value>
   </Operation>
   
   <Operation Class="PatchOperationReplace">
-    <xpath>Defs/ThingDef[defName="Sheep"]/comps/li/woolDef</xpath>
+    <xpath>/Defs/ThingDef[defName="Sheep"]/comps/li/woolDef</xpath>
 	<value>
 	  <woolDef>SMRW_sheepFleece</woolDef>
 	</value>
   </Operation>
   
   <Operation Class="PatchOperationReplace">
-    <xpath>Defs/ThingDef[defName="Bison"]/comps/li/woolDef</xpath>
+    <xpath>/Defs/ThingDef[defName="Bison"]/comps/li/woolDef</xpath>
 	<value>
 	  <woolDef>SMRW_bisonFleece</woolDef>
 	</value>
@@ -44,7 +44,7 @@
 	<success>Always</success>
 	<operations>
 	  <li Class="PatchOperationAdd">
-	    <xpath>Defs</xpath>
+	    <xpath>/Defs</xpath>
 		<value>
 		  
 		  <ThingDef ParentName="SMRW_FleeceBase">
@@ -199,35 +199,35 @@
 	  </li>
 	  
 	  <li Class="PatchOperationReplace">
-	    <xpath>Defs/ThingDef[defName="ACPSheep"]/comps/li/woolDef</xpath>
+	    <xpath>/Defs/ThingDef[defName="ACPSheep"]/comps/li/woolDef</xpath>
 	    <value>
 	      <woolDef>SMRW_sheepFleece</woolDef>
 	    </value>
 	  </li>
 	  
 	  <li Class="PatchOperationReplace">
-	    <xpath>Defs/ThingDef[defName="ACPBlackwolf"]/comps/li/woolDef</xpath>
+	    <xpath>/Defs/ThingDef[defName="ACPBlackwolf"]/comps/li/woolDef</xpath>
 	    <value>
 	      <woolDef>SMRW_direWolfFleece</woolDef>
 	    </value>
 	  </li>
 	  
 	  <li Class="PatchOperationReplace">
-	    <xpath>Defs/ThingDef[defName="ACPBison"]/comps/li/woolDef</xpath>
+	    <xpath>/Defs/ThingDef[defName="ACPBison"]/comps/li/woolDef</xpath>
 	    <value>
 	      <woolDef>SMRW_downyBisonFleece</woolDef>
 	    </value>
 	  </li>
 	  
 	  <li Class="PatchOperationReplace">
-	    <xpath>Defs/ThingDef[defName="ACPLlama"]/comps/li/woolDef</xpath>
+	    <xpath>/Defs/ThingDef[defName="ACPLlama"]/comps/li/woolDef</xpath>
 	    <value>
 	      <woolDef>SMRW_llamaFleece</woolDef>
 	    </value>
 	  </li>
 	  
 	  <li Class="PatchOperationReplace">
-	    <xpath>Defs/ThingDef[defName="ACPAngoraRabbit"]/comps/li/woolDef</xpath>
+	    <xpath>/Defs/ThingDef[defName="ACPAngoraRabbit"]/comps/li/woolDef</xpath>
 	    <value>
 	      <woolDef>SMRW_angoraRabbitFleece</woolDef>
 	    </value>
@@ -246,7 +246,7 @@
 	<success>Always</success>
 	<operations>
 	  <li Class="PatchOperationReplace">
-        <xpath>Defs/RecipeDef[@Name="SMRW_RecipeWoolBase"]/recipeUsers</xpath>
+        <xpath>/Defs/RecipeDef[@Name="SMRW_RecipeWoolBase"]/recipeUsers</xpath>
 	    <value>
 	      <recipeUsers>
 	        <li>TableLoom</li>
@@ -255,25 +255,25 @@
 	    </value>
 	  </li>
 	  <li Class="PatchOperationReplace">
-	    <xpath>Defs/ThingDef[defName="SMRW_megaslothFleece"]/description</xpath>
+	    <xpath>/Defs/ThingDef[defName="SMRW_megaslothFleece"]/description</xpath>
 		<value>
 		  <description>The untreated fleece of a Megasloth. It must be made in to wool at a Tailor's loom before it can be used.</description>
 		</value>
 	  </li>
 	  <li Class="PatchOperationReplace">
-	    <xpath>Defs/ThingDef[defName="SMRW_muffaloFleece"]/description</xpath>
+	    <xpath>/Defs/ThingDef[defName="SMRW_muffaloFleece"]/description</xpath>
 		<value>
 		  <description>The untreated fleece of a Muffalo. It must be made in to wool at a Tailor's loom before it can be used.</description>
 		</value>
 	  </li>
 	  <li Class="PatchOperationReplace">
-	    <xpath>Defs/ThingDef[defName="SMRW_camelFleece"]/description</xpath>
+	    <xpath>/Defs/ThingDef[defName="SMRW_camelFleece"]/description</xpath>
 		<value>
 		  <description>The untreated fleece of a Camel. It must be made in to wool at a Tailor's loom before it can be used.</description>
 		</value>
 	  </li>
 	  <li Class="PatchOperationReplace">
-	    <xpath>Defs/ThingDef[defName="SMRW_alpacaFleece"]/description</xpath>
+	    <xpath>/Defs/ThingDef[defName="SMRW_alpacaFleece"]/description</xpath>
 		<value>
 		  <description>The untreated fleece of an Alpaca. It must be made in to wool at a Tailor's loom before it can be used.</description>
 		</value>
