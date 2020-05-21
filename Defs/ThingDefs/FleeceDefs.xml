@@ -2,12 +2,12 @@
 <Defs>
 
 <!-- Fleece parent -->
-  <ThingDef Abstract="True" ParentName="OrganicProductBase" Name="FleeceBase">
+  <ThingDef Abstract="True" ParentName="OrganicProductBase" Name="SMRW_FleeceBase">
 	<soundInteract>Standard_Drop</soundInteract>
 	<soundDrop>Standard_Drop</soundDrop>
 	<stackLimit>100</stackLimit>
 	<thingCategories>
-	  <li>fleeceCategory</li>
+	  <li>SMRW_fleeceCategory</li>
 	</thingCategories>
 	<graphicData>
 	  <texPath>Things/Item/Resource/fleece</texPath>
@@ -22,8 +22,8 @@
 
 <!-- Fleece for animals -->
 
-  <ThingDef ParentName="FleeceBase">
-    <defName>megaslothFleece</defName>
+  <ThingDef ParentName="SMRW_FleeceBase">
+    <defName>SMRW_megaslothFleece</defName>
     <label>megasloth fleece</label>
     <description>The untreated fleece of a Megasloth. It must be made in to wool at a Tailor's bench before it can be used.</description>
     <graphicData>
@@ -34,8 +34,8 @@
     </stuffProps>
   </ThingDef>
   
-  <ThingDef ParentName="FleeceBase">
-    <defName>muffaloFleece</defName>
+  <ThingDef ParentName="SMRW_FleeceBase">
+    <defName>SMRW_muffaloFleece</defName>
     <label>muffalo fleece</label>
     <description>The untreated fleece of a Muffalo. It must be made in to wool at a Tailor's bench before it can be used.</description>
     <graphicData>
@@ -46,8 +46,8 @@
     </stuffProps>
   </ThingDef>
   
-  <ThingDef ParentName="FleeceBase">
-    <defName>camelFleece</defName>
+  <ThingDef ParentName="SMRW_FleeceBase">
+    <defName>SMRW_camelFleece</defName>
 	<label>camel fleece</label>
     <description>The untreated fleece of a Camel. It must be made in to wool at a Tailor's bench before it can be used.</description>
     <graphicData>
@@ -58,8 +58,8 @@
     </stuffProps>
   </ThingDef>
   
-  <ThingDef ParentName="FleeceBase">
-    <defName>alpacaFleece</defName>
+  <ThingDef ParentName="SMRW_FleeceBase">
+    <defName>SMRW_alpacaFleece</defName>
 	<label>alpaca fleece</label>
 	<description>The untreated fleece of an Alpaca. It must be made in to wool at a Tailor's bench before it can be used.</description>
     <graphicData>
@@ -67,6 +67,30 @@
     </graphicData>
     <stuffProps>
       <color>(180,148,109)</color>
+    </stuffProps>
+  </ThingDef>
+  
+  <ThingDef ParentName="SMRW_FleeceBase">
+    <defName>SMRW_sheepFleece</defName>
+	<label>sheep fleece</label>
+	<description>The untreated fleece of a Sheep. It must be made in to wool at a Tailor's bench before it can be used.</description>
+    <graphicData>
+      <color>(219,214,209)</color>
+    </graphicData>
+    <stuffProps>
+      <color>(219,214,209)</color>
+    </stuffProps>
+  </ThingDef>
+  
+  <ThingDef ParentName="SMRW_FleeceBase">
+    <defName>SMRW_bisonFleece</defName>
+	<label>bison fleece</label>
+	<description>The untreated fleece of a Bison. It must be made in to wool at a Tailor's bench before it can be used.</description>
+    <graphicData>
+      <color>(104,69,45)</color>
+    </graphicData>
+    <stuffProps>
+      <color>(104,69,45)</color>
     </stuffProps>
   </ThingDef>
 
