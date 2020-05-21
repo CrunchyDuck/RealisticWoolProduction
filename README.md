@@ -12,3 +12,4 @@ I plan on making a compatibility patch for mods that add in other animals in the
 
 ## **Credits**
 Thanks a lot to **Yagiou** on Steam for information to do with patching.
+Thanks to **lilwhitemouse** for the optimization fixes
