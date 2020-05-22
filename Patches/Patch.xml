@@ -1,40 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-  <!--Core-->
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/ThingDef[defName="Megasloth"]/comps/li/woolDef</xpath>
-	<value>
-	  <woolDef>SMRW_megaslothFleece</woolDef>
-	</value>
-  </Operation>
   
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/ThingDef[defName="Muffalo"]/comps/li/woolDef</xpath>
-	<value>
-	  <woolDef>SMRW_muffaloFleece</woolDef>
-	</value>
-  </Operation>
-  
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/ThingDef[defName="Alpaca"]/comps/li/woolDef</xpath>
-	<value>
-	  <woolDef>SMRW_alpacaFleece</woolDef>
-	</value>
-  </Operation>
-  
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/ThingDef[defName="Sheep"]/comps/li/woolDef</xpath>
-	<value>
-	  <woolDef>SMRW_sheepFleece</woolDef>
-	</value>
-  </Operation>
-  
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/ThingDef[defName="Bison"]/comps/li/woolDef</xpath>
-	<value>
-	  <woolDef>SMRW_bisonFleece</woolDef>
-	</value>
-  </Operation>
+	<!-- Core -->
+  	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef/comps/li[@Class = "CompProperties_Shearable" and woolDef = "WoolAlpaca"]/woolDef</xpath>
+		<value>
+			<woolDef>SMRW_alpacaFleece</woolDef>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef/comps/li[@Class = "CompProperties_Shearable" and woolDef = "WoolMegasloth"]/woolDef</xpath>
+		<value>
+			<woolDef>SMRW_megaslothFleece</woolDef>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef/comps/li[@Class = "CompProperties_Shearable" and woolDef = "WoolMuffalo"]/woolDef</xpath>
+		<value>
+			<woolDef>SMRW_muffaloFleece</woolDef>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef/comps/li[@Class = "CompProperties_Shearable" and woolDef = "WoolBison"]/woolDef</xpath>
+		<value>
+			<woolDef>SMRW_bisonFleece</woolDef>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef/comps/li[@Class = "CompProperties_Shearable" and woolDef = "WoolSheep"]/woolDef</xpath>
+		<value>
+			<woolDef>SMRW_sheepFleece</woolDef>
+		</value>
+	</Operation>
   
   <!--AnimalCollabProj-->
   <Operation Class="PatchOperationFindMod">
@@ -237,23 +238,6 @@
     </operations>
 	</match>
   </Operation>
-	<!--PygmyMuffalo-->
-	<Operation Class="PatchOperationFindMod">
-	<mods>
-	  <li>Pygmy muffalo</li>
-	</mods>
-		<match Class="PatchOperationSequence">
-			<success>Always</success>
-			<operations>
-			  <li Class="PatchOperationReplace">
-				<xpath>/Defs/ThingDef[defName="PygmyMuffalo"]/comps/li/woolDef</xpath>
-				<value>
-				  <woolDef>SMRW_muffaloFleece</woolDef>
-				</value>
-			  </li>
-			</operations>
-		</match>
-	</Operation>
 	
   <!-- Modcheck for Vegetable Garden -->
   <Operation Class="PatchOperationFindMod">
