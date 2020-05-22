@@ -36,6 +36,7 @@
 	</value>
   </Operation>
   
+  <!--AnimalCollabProj-->
   <Operation Class="PatchOperationFindMod">
 	<mods>
 	  <li>AnimalCollabProj</li>
@@ -236,6 +237,23 @@
     </operations>
 	</match>
   </Operation>
+	<!--PygmyMuffalo-->
+	<Operation Class="PatchOperationFindMod">
+	<mods>
+	  <li>Pygmy muffalo</li>
+	</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+			  <li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="PygmyMuffalo"]/comps/li/woolDef</xpath>
+				<value>
+				  <woolDef>SMRW_muffaloFleece</woolDef>
+				</value>
+			  </li>
+			</operations>
+		</match>
+	</Operation>
 	
   <!-- Modcheck for Vegetable Garden -->
   <Operation Class="PatchOperationFindMod">
