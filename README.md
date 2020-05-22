@@ -8,6 +8,8 @@ When **AnimalCollabProj** is detected, will make any shearable animal produce fl
 These inclusions are **not dependancies**, and this mod will work with or without them.
 This mod is save compatible.
 
+If you want to add your own patch to the mod, you are invited to do a fork and a pull request in order to keep everything within the same mod. It would be very appreciated!
+
 ## **Future plans**
 I plan on making a compatibility patch for mods that add in other animals in the future. If anyone wishes for a specific mod to be covered by this, let me know.
 
